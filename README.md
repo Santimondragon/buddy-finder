@@ -4,5 +4,5 @@
 ## Run:
 * npm start
 
-## Expor:
+## Export:
 * npm run prods
