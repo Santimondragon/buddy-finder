@@ -11,30 +11,32 @@ import {
 import './Root.scss';
 
 import { store } from '../../stores/Store';
-import Example from '../../components/Example/Example';
+import ActionPanel from '../ActionPanel/ActionPanel';
+import HoodCriteria from '../HoodCriteria/HoodCriteria';
+import ContextCriteria from '../ContextCriteria/ContextCriteria';
+import Users from '../Users/Users';
+import HoodUsers from '../HoodUsers/HoodUsers';
+import Match from '../../components/Match/Match';
 
-interface IRootProps { }
 
-@observer export class Root extends React.Component<IRootProps> {
+export class Root extends React.Component {
+    constructor(props:any){
+        super(props)
+    }
 
-    render() {
+    render(){
         return (
             <Router>
-                <section>
-                    <Route exact path="/" component={Example} />
-                    <Route path="/example" component={Example} />
-                    <PrivateRoute path="/example-private" component={Example} />
-                </section>
+                <div>
+                    <Route exact path="/" component={ActionPanel} />
+                    <Route exact path="/" component={Users} />
+                    <Route exact path="/" component={HoodUsers} />
+                    <Route exact path="/" component={ContextCriteria} />
+                    <Route exact path="/" component={HoodCriteria} />
+                    <Route exact path="/" component={Match} />
+                </div>
             </Router>
+
         )
     }
 }
-
-
-/* const PrivateRoute = ({ component: Component, ...rest }:any) => (
-    <Route {...rest} render={(props) => (
-        store.isAuth ?
-        (<Component{...props} />) : (<Redirect to={{ pathname: "/example-private" }}/>
-        )
-    )} />
-  ) */

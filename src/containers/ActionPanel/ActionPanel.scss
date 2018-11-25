@@ -1,0 +1,37 @@
+#actionPanel {
+    position: relative;
+    flex-flow: column;
+    padding: 15px;
+    width: 25vw;
+    height: 100vh;
+    background: white;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .1);
+    &::before {
+        content:" ";
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: -30px;
+        top: 45%;
+        border-top: 20px solid transparent;
+        border-right: 30px solid white;
+        border-bottom: 20px solid transparent;
+        filter: drop-shadow(-3px 0 2px rgba(0, 0, 0, .1));
+    }
+    &::after {
+        content:" ";
+        position: absolute;
+        width: 0;
+        height: 0;
+        right: -30px;
+        top: 45%;
+        border-top: 20px solid transparent;
+        border-left: 30px solid white;
+        border-bottom: 20px solid transparent;
+        filter: drop-shadow(3px 0 2px rgba(0, 0, 0, .1));
+    }
+}

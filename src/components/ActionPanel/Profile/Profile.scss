@@ -1,0 +1,47 @@
+#profile {
+    flex: 35% 0 1;
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    div {
+        position: relative;
+        img {
+            cursor: pointer;
+        }
+        .thumbnail {
+            position: absolute;
+            width: 95px;
+            top: 9px;
+            left: 12px;
+            border-radius: 90px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+        }
+    }
+    h1 {
+        cursor: default;
+        &::selection {
+            background: none;
+        }
+    }
+    &.notActive {
+        img {
+            margin-bottom: -10px;
+        }
+        h1 {
+            filter: opacity(0);
+        }
+    }
+    &.active {
+        img {
+            margin-bottom: 20px;
+        }
+        h1 {
+            filter: opacity(1);
+        }
+    }
+}

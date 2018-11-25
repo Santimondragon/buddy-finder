@@ -1,0 +1,91 @@
+#contextCriteria {
+    position: fixed;
+    width: 480px;
+    height: 90vh;
+    bottom: 0px;
+    right: 15px;
+    padding: 15px 15px 15px 0;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    background: white;
+    border-radius: 15px 5px 0 0;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .1);
+    cursor: default;    
+    #contextCriteriaActivator {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: flex-start;
+        position: absolute;
+        padding: 10px 15px;
+        border-radius: 5px 5px 0 0;
+        top: -35px;
+        right: 140px;
+        height: fit-content;
+        width: fit-content;
+        overflow: hidden;
+        cursor: pointer;
+        filter: drop-shadow( 0 -3px 2px rgba(0, 0, 0, .1));
+        transition: none;
+    }
+    ul {
+        width: 100%;
+        height: 60vh;
+        padding: 5px 5px 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-content: flex-start;
+        align-items: flex-start;
+        justify-content: flex-start;
+        overflow: hidden;
+        .criteriaItem {
+            background: #00a99d;
+            display: flex;
+            align-content: center;
+            align-items: center;
+            align-items: center;
+            min-height: 35px;
+            margin-left: 15px;
+            margin-bottom: 15px;
+            width: fit-content;
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, .4);
+            filter: drop-shadow( 0 -3px 2px rgba(0, 0, 0, .1));
+            cursor: grab;
+            font-size: 14px;
+            font-weight: 500;
+            color: white;
+            
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+    &.notActive {
+        height: 0;
+        bottom: -30px;
+        z-index: 999;
+        ul {
+            height: 0vh;
+        }
+        #contextCriteriaActivator {
+            background: #00a99d;
+            color: white;
+            box-shadow:inset 0 0 15px 0 rgba(0, 0, 0, .4);
+        }
+    }
+    &.active {
+        height: fit-content;
+    }
+    #contextCriteriaActivator {
+        background: white;
+        color: black;
+        box-shadow: none;
+    }
+}
