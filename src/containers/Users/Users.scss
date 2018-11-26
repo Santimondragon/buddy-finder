@@ -1,14 +1,15 @@
 #users {
-    margin-left: 4vw;
-    width: 31vw;
-    padding: 0 3vw;
+    margin-left: 3vw;
+    margin-right: 1vw;
+    width: 33vw;
+    padding: 0 2vw;
     height: 100vh;
     
 
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    align-items: center;
+    justify-content: center;
     align-items: center;
     position: fixed;
     top: 0px;

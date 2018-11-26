@@ -13,8 +13,9 @@ interface filterProps {
     position: number;
 }
 
-const Filter = observer(({ content, background, used, value, position}: filterProps) => {
+const Filter = observer(({ content, background, used, value, position }: filterProps) => {
     background = "white";
+    console.log("loading")
     return (
         <article
             style={{
@@ -22,12 +23,15 @@ const Filter = observer(({ content, background, used, value, position}: filterPr
             }}
             onDragOver={(e: any) => {
                 e.target.style.cursor = "hand"
-                if (!used && dragAndDropStore.draggedInfo != "" ) {
+                if (!used && dragAndDropStore.draggedInfo != "") {
                     value = dragAndDropStore.draggedInfo;
                     e.target.innerHTML = "<span>" + value + "</span>";
                     e.target.style.backgroundColor = dragAndDropStore.draggedBackground;
                     store.setHoodUsers(dragAndDropStore.draggedInfo, position);
                     used = true;
+                }
+                if(e.target.innerHTML == "<span></span>"){
+                    used = false;
                 }
             }}
             onDoubleClick={(e: any) => {
@@ -38,8 +42,7 @@ const Filter = observer(({ content, background, used, value, position}: filterPr
                 e.target.style.backgroundColor = "white";
                 used = false;
             }}
-
-            className="filter">
+            id={"filter"+position}>
             <span>{content}</span>
         </article>
     )

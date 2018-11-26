@@ -16,11 +16,12 @@ const Profile = observer(({ persona }: profileProps) => {
                 <img src="./assets/img/profileSlot.png" alt="Profile Slot"
                     onClick={() => {
                         document.getElementById("profile").className === "notActive" ? document.getElementById("profile").className = "active" : document.getElementById("profile").className = "notActive";
+                        store.clearAllArrays();
                     }} />
                 <img src={store.selectedUser.foto} alt={store.selectedUser.nombreCompleto} className="thumbnail"
                     onClick={() => {
                         document.getElementById("profile").className === "notActive" ? document.getElementById("profile").className = "active" : document.getElementById("profile").className = "notActive";
-                        store.setUser({});
+                        store.clearAllArrays();
                     }} />
             </div>
             <h1>{store.selectedUser.nombreCompleto}</h1>

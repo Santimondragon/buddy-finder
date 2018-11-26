@@ -16,9 +16,9 @@ const ContextCriteria = observer(withRouter((criteriaProps) => {
             <div id="contextCriteriaActivator"
                 onClick={() => {
                     document.getElementById("contextCriteria").className === "notActive" ? document.getElementById("contextCriteria").className = "active"  : document.getElementById("contextCriteria").className = "notActive";
-                    document.getElementById("contextCriteria").className === "notActive" ? document.getElementById("contextCriteriaActivator").innerHTML = "<span>Context ▲</span>" :  document.getElementById("contextCriteriaActivator").innerHTML = "<span>Context ▼</span>";
+                    document.getElementById("contextCriteria").className === "notActive" ? document.getElementById("contextCriteriaActivator").innerHTML = "<span>Contexto ▲</span>" :  document.getElementById("contextCriteriaActivator").innerHTML = "<span>Contexto ▼</span>";
                 }}>
-                <span>Context ▲</span>
+                <span>Contexto ▲</span>
             </div>
                 <ul>
                 {store.contextCriterios.map((elem: any, index: number) =>

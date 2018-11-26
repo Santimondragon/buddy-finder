@@ -18,34 +18,33 @@ const HoodUser = observer(({ person, picture, genre }: hoodUserProps) => {
             className="hoodUser"
             onClick={() => {
                 store.setHoodUser(person);
-                document.getElementById("match").style.zIndex = "9999";
-                document.getElementById("match").style.opacity = "1";
-            }} 
+                store.setPlaces();
+                if (store.selectedUser == {} || store.selectedUser.nombreCompleto != "") {
+                    document.getElementById("match").style.zIndex = "9999";
+                    document.getElementById("match").style.opacity = "1";
+                }
+            }}
         >
-            <img src={person.foto} alt=""/>
+            <img src={person.foto} alt="" />
             <div className="info">
                 <div className="content">
                     <h1>{person.nombreCompleto}</h1>
                     <ul className="gustos">
                         <li>
-                            <img src="./assets/img/snowflake.png" alt="" />
                             <span>{person.temperatura}</span>
+                            <img src="./assets/img/snowflake.png" alt="" />
                         </li>
                         <li>
-                            <img src="./assets/img/harvest.png" alt="" />
-                            <span>{person.frutas}</span>
-                        </li>
-                        <li>
-                            <img src="./assets/img/new.png" alt="" />
                             <span>{person.tipo}</span>
+                            <img src="./assets/img/new.png" alt="" />
                         </li>
                         <li>
-                            <img src="./assets/img/team.png" alt="" />
                             <span>{person.espacio}</span>
+                            <img src="./assets/img/team.png" alt="" />
                         </li>
                         <li>
-                            <img src="./assets/img/coffee-cup.png" alt="" />
                             <span>{person.cafe}</span>
+                            <img src="./assets/img/coffee-cup.png" alt="" />
                         </li>
                     </ul>
                     <button

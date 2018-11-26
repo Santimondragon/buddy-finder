@@ -6,6 +6,7 @@ import { withRouter } from 'react-router';
 import './ActionPanel.scss';
 import Profile from '../../components/ActionPanel/Profile/Profile';
 import Filters from '../../components/ActionPanel/FIlters/Filters';
+import Settings from '../../components/ActionPanel/Settings/Settings';
 
 interface actionPanelProps {
 
@@ -16,6 +17,7 @@ const ActionPanel = observer(withRouter((actionPanelProps) => {
         <article id="actionPanel">
             <Profile persona={store.selectedUser}/>
             <Filters />
+            <Settings />
         </article>
     )
 }));

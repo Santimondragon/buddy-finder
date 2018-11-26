@@ -17,6 +17,7 @@ const User = observer(({ person, picture, genre }: userProps) => {
             draggable
             className="user"
             onClick={() => {
+                store.clearAllArrays();
                 store.setUser(person);
                 store.cosineSimilarity(store.selectedUser);
                 document.getElementById("profile").className = "active";
@@ -28,24 +29,20 @@ const User = observer(({ person, picture, genre }: userProps) => {
                     <h1>{person.nombreCompleto}</h1>
                     <ul className="gustos">
                         <li>
-                            <img src="./assets/img/snowflake.png" alt="" />
                             <span>{person.temperatura}</span>
+                            <img src="./assets/img/snowflake.png" alt="" />
                         </li>
                         <li>
-                            <img src="./assets/img/harvest.png" alt="" />
-                            <span>{person.frutas}</span>
-                        </li>
-                        <li>
-                            <img src="./assets/img/new.png" alt="" />
                             <span>{person.tipo}</span>
+                            <img src="./assets/img/new.png" alt="" />
                         </li>
                         <li>
-                            <img src="./assets/img/team.png" alt="" />
                             <span>{person.espacio}</span>
+                            <img src="./assets/img/team.png" alt="" />
                         </li>
                         <li>
-                            <img src="./assets/img/coffee-cup.png" alt="" />
                             <span>{person.cafe}</span>
+                            <img src="./assets/img/coffee-cup.png" alt="" />
                         </li>
                     </ul>
                     <button

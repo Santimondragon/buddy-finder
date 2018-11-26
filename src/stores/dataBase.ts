@@ -21,7 +21,8 @@ class DataBase {
       "frutas": 8,
       "tipo": 5,
       "espacio": 4,
-      "cafe": 0
+      "cafe": 0,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Alejandro Salazar",
@@ -35,7 +36,8 @@ class DataBase {
       "frutas": 8,
       "tipo": 3,
       "espacio": 1,
-      "cafe": 3
+      "cafe": 3,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Aleksandro Londoño",
@@ -49,7 +51,8 @@ class DataBase {
       "frutas": 6,
       "tipo": 6,
       "espacio": 3,
-      "cafe": 8
+      "cafe": 8,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Andres Esponja",
@@ -63,7 +66,8 @@ class DataBase {
       "frutas": 9,
       "tipo": 8,
       "espacio": 1,
-      "cafe": 6
+      "cafe": 6,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Andres Garcia",
@@ -77,7 +81,8 @@ class DataBase {
       "frutas": 3,
       "tipo": 5,
       "espacio": 1,
-      "cafe": 10
+      "cafe": 10,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Andres Zabaleta",
@@ -91,7 +96,8 @@ class DataBase {
       "frutas": 10,
       "tipo": 7,
       "espacio": 2,
-      "cafe": 4
+      "cafe": 4,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Arturo Gomez",
@@ -105,7 +111,8 @@ class DataBase {
       "frutas": 1,
       "tipo": 2,
       "espacio": 2,
-      "cafe": 10
+      "cafe": 10,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Camila Guzman",
@@ -119,7 +126,8 @@ class DataBase {
       "frutas": 0,
       "tipo": 3,
       "espacio": 3,
-      "cafe": 7
+      "cafe": 7,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Camilo Murillo",
@@ -133,7 +141,8 @@ class DataBase {
       "frutas": 10,
       "tipo": 0,
       "espacio": 0,
-      "cafe": 7
+      "cafe": 7,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Camilo Rivillas",
@@ -147,7 +156,8 @@ class DataBase {
       "frutas": 9,
       "tipo": 8,
       "espacio": 3,
-      "cafe": 2
+      "cafe": 2,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Camilo Tobar",
@@ -161,7 +171,8 @@ class DataBase {
       "frutas": 2,
       "tipo": 2,
       "espacio": 7,
-      "cafe": 10
+      "cafe": 10,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Carlos Castilla",
@@ -175,7 +186,8 @@ class DataBase {
       "frutas": 5,
       "tipo": 5,
       "espacio": 0,
-      "cafe": 10
+      "cafe": 10,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Carolina Escobar",
@@ -189,7 +201,8 @@ class DataBase {
       "frutas": 7,
       "tipo": 3,
       "espacio": 3,
-      "cafe": 5
+      "cafe": 5,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Cesar Dominguez",
@@ -203,7 +216,8 @@ class DataBase {
       "frutas": 10,
       "tipo": 10,
       "espacio": 6,
-      "cafe": 10
+      "cafe": 10,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Christian Arias",
@@ -217,7 +231,8 @@ class DataBase {
       "frutas": 5,
       "tipo": 6,
       "espacio": 3,
-      "cafe": 10
+      "cafe": 10,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Christopher Bravo",
@@ -231,7 +246,8 @@ class DataBase {
       "frutas": 5,
       "tipo": 5,
       "espacio": 5,
-      "cafe": 10
+      "cafe": 10,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Claudia Montaña",
@@ -245,7 +261,8 @@ class DataBase {
       "frutas": 10,
       "tipo": 5,
       "espacio": 9,
-      "cafe": 0
+      "cafe": 0,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Cristian Guevara",
@@ -259,7 +276,8 @@ class DataBase {
       "frutas": 2,
       "tipo": 2,
       "espacio": 5,
-      "cafe": 0
+      "cafe": 0,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Cristian Rodriguez",
@@ -273,7 +291,8 @@ class DataBase {
       "frutas": 9,
       "tipo": 2,
       "espacio": 1,
-      "cafe": 5
+      "cafe": 5,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Daniel Rabia",
@@ -287,7 +306,8 @@ class DataBase {
       "frutas": 3,
       "tipo": 8,
       "espacio": 3,
-      "cafe": 10
+      "cafe": 10,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Daniel Steven Rojas",
@@ -301,7 +321,8 @@ class DataBase {
       "frutas": 5,
       "tipo": 6,
       "espacio": 3,
-      "cafe": 6
+      "cafe": 6,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "David Bernal",
@@ -315,7 +336,8 @@ class DataBase {
       "frutas": 10,
       "tipo": 10,
       "espacio": 2,
-      "cafe": 10
+      "cafe": 10,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Dawer Tabares",
@@ -329,7 +351,8 @@ class DataBase {
       "frutas": 5,
       "tipo": 5,
       "espacio": 5,
-      "cafe": 0
+      "cafe": 0,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Dayana Torres",
@@ -343,7 +366,8 @@ class DataBase {
       "frutas": 10,
       "tipo": 7,
       "espacio": 0,
-      "cafe": 10
+      "cafe": 10,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Diana Flores",
@@ -357,7 +381,8 @@ class DataBase {
       "frutas": 7,
       "tipo": 5,
       "espacio": 0,
-      "cafe": 5
+      "cafe": 5,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Diego Zuñiga",
@@ -371,7 +396,8 @@ class DataBase {
       "frutas": 5,
       "tipo": 10,
       "espacio": 9,
-      "cafe": 6
+      "cafe": 6,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Estefania Montaña",
@@ -385,7 +411,8 @@ class DataBase {
       "frutas": 0,
       "tipo": 0,
       "espacio": 1,
-      "cafe": 10
+      "cafe": 10,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Ilian Londoño",
@@ -399,7 +426,8 @@ class DataBase {
       "frutas": 8,
       "tipo": 6,
       "espacio": 2,
-      "cafe": 8
+      "cafe": 8,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Isabella Jordan",
@@ -413,7 +441,8 @@ class DataBase {
       "frutas": 4,
       "tipo": 7,
       "espacio": 6,
-      "cafe": 10
+      "cafe": 10,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Isabella Murillo",
@@ -427,7 +456,8 @@ class DataBase {
       "frutas": 6,
       "tipo": 0,
       "espacio": 0,
-      "cafe": 5
+      "cafe": 5,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Isabella Peña",
@@ -441,7 +471,8 @@ class DataBase {
       "frutas": 7,
       "tipo": 3,
       "espacio": 4,
-      "cafe": 5
+      "cafe": 5,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Jaime Montaña",
@@ -455,7 +486,8 @@ class DataBase {
       "frutas": 10,
       "tipo": 4,
       "espacio": 0,
-      "cafe": 8
+      "cafe": 8,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Jessica Rendon",
@@ -469,7 +501,8 @@ class DataBase {
       "frutas": 10,
       "tipo": 6,
       "espacio": 9,
-      "cafe": 6
+      "cafe": 6,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Jhonatan Rios",
@@ -483,7 +516,8 @@ class DataBase {
       "frutas": 8,
       "tipo": 5,
       "espacio": 5,
-      "cafe": 5
+      "cafe": 5,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Joan Cardona",
@@ -497,7 +531,8 @@ class DataBase {
       "frutas": 10,
       "tipo": 0,
       "espacio": 2,
-      "cafe": 10
+      "cafe": 10,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Jorge Andres Cano",
@@ -511,7 +546,8 @@ class DataBase {
       "frutas": 7,
       "tipo": 0,
       "espacio": 3,
-      "cafe": 9
+      "cafe": 9,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Jose Alejandro Ossa",
@@ -525,7 +561,8 @@ class DataBase {
       "frutas": 8,
       "tipo": 3,
       "espacio": 2,
-      "cafe": 2
+      "cafe": 2,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Juan Antonio Pazmiño",
@@ -539,7 +576,8 @@ class DataBase {
       "frutas": 2,
       "tipo": 5,
       "espacio": 4,
-      "cafe": 0
+      "cafe": 0,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Juan David Perez",
@@ -553,7 +591,8 @@ class DataBase {
       "frutas": 1,
       "tipo": 9,
       "espacio": 2,
-      "cafe": 4
+      "cafe": 4,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Juan Sebastian Lopez",
@@ -567,7 +606,8 @@ class DataBase {
       "frutas": 0,
       "tipo": 5,
       "espacio": 0,
-      "cafe": 3
+      "cafe": 3,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Juliana Llano",
@@ -581,7 +621,8 @@ class DataBase {
       "frutas": 10,
       "tipo": 5,
       "espacio": 1,
-      "cafe": 7
+      "cafe": 7,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Juliana Rosas",
@@ -595,7 +636,8 @@ class DataBase {
       "frutas": 6,
       "tipo": 6,
       "espacio": 2,
-      "cafe": 8
+      "cafe": 8,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Julio Echeverry",
@@ -609,7 +651,8 @@ class DataBase {
       "frutas": 4,
       "tipo": 5,
       "espacio": 2,
-      "cafe": 10
+      "cafe": 10,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Karen Caicedo",
@@ -623,7 +666,8 @@ class DataBase {
       "frutas": 10,
       "tipo": 5,
       "espacio": 6,
-      "cafe": 10
+      "cafe": 10,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Laura Oggioni",
@@ -637,7 +681,8 @@ class DataBase {
       "frutas": 10,
       "tipo": 0,
       "espacio": 3,
-      "cafe": 10
+      "cafe": 10,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Libia Guevara",
@@ -651,7 +696,8 @@ class DataBase {
       "frutas": 10,
       "tipo": 1,
       "espacio": 2,
-      "cafe": 6
+      "cafe": 6,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Luisa Marmolejo",
@@ -665,7 +711,8 @@ class DataBase {
       "frutas": 10,
       "tipo": 5,
       "espacio": 6,
-      "cafe": 2
+      "cafe": 2,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Manuela Epe",
@@ -679,7 +726,8 @@ class DataBase {
       "frutas": 9,
       "tipo": 1,
       "espacio": 3,
-      "cafe": 7
+      "cafe": 7,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Marcela Lubo",
@@ -693,7 +741,8 @@ class DataBase {
       "frutas": 10,
       "tipo": 0,
       "espacio": 2,
-      "cafe": 10
+      "cafe": 10,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Maria Camila Morales",
@@ -707,7 +756,8 @@ class DataBase {
       "frutas": 8,
       "tipo": 2,
       "espacio": 6,
-      "cafe": 9
+      "cafe": 9,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Maria Eugenia Bolaños",
@@ -721,7 +771,8 @@ class DataBase {
       "frutas": 5,
       "tipo": 5,
       "espacio": 0,
-      "cafe": 4
+      "cafe": 4,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Maria Isabel Hernandez",
@@ -735,7 +786,8 @@ class DataBase {
       "frutas": 9,
       "tipo": 7,
       "espacio": 2,
-      "cafe": 10
+      "cafe": 10,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Michelle Marulanda",
@@ -749,7 +801,8 @@ class DataBase {
       "frutas": 10,
       "tipo": 5,
       "espacio": 0,
-      "cafe": 3
+      "cafe": 3,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Miguel Santiago Murillo",
@@ -763,7 +816,8 @@ class DataBase {
       "frutas": 9,
       "tipo": 0,
       "espacio": 2,
-      "cafe": 10
+      "cafe": 10,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Natalia Atehortua",
@@ -777,7 +831,8 @@ class DataBase {
       "frutas": 0,
       "tipo": 6,
       "espacio": 3,
-      "cafe": 10
+      "cafe": 10,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Natalia Guzman",
@@ -791,7 +846,8 @@ class DataBase {
       "frutas": 0,
       "tipo": 2,
       "espacio": 3,
-      "cafe": 5
+      "cafe": 5,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Nicolas Martinez",
@@ -805,7 +861,8 @@ class DataBase {
       "frutas": 3,
       "tipo": 5,
       "espacio": 3,
-      "cafe": 7
+      "cafe": 7,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Oscar hoyos",
@@ -819,7 +876,8 @@ class DataBase {
       "frutas": 5,
       "tipo": 3,
       "espacio": 0,
-      "cafe": 9
+      "cafe": 9,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Paula Andrea Hurtado",
@@ -833,7 +891,8 @@ class DataBase {
       "frutas": 9,
       "tipo": 5,
       "espacio": 3,
-      "cafe": 8
+      "cafe": 8,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Paula Garcia",
@@ -847,7 +906,8 @@ class DataBase {
       "frutas": 4,
       "tipo": 6,
       "espacio": 2,
-      "cafe": 7
+      "cafe": 7,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Paula Muñoz",
@@ -861,7 +921,8 @@ class DataBase {
       "frutas": 10,
       "tipo": 5,
       "espacio": 3,
-      "cafe": 9
+      "cafe": 9,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Paulo Rosas",
@@ -875,7 +936,8 @@ class DataBase {
       "frutas": 9,
       "tipo": 5,
       "espacio": 0,
-      "cafe": 3
+      "cafe": 3,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Samuell Rosas",
@@ -889,7 +951,8 @@ class DataBase {
       "frutas": 6,
       "tipo": 5,
       "espacio": 3,
-      "cafe": 2
+      "cafe": 2,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Santiago Mondragon",
@@ -903,7 +966,8 @@ class DataBase {
       "frutas": 5,
       "tipo": 8,
       "espacio": 2,
-      "cafe": 10
+      "cafe": 10,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Santiago Murillo",
@@ -917,7 +981,8 @@ class DataBase {
       "frutas": 6,
       "tipo": 7,
       "espacio": 6,
-      "cafe": 7
+      "cafe": 7,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Sebastian Restrepo",
@@ -931,7 +996,8 @@ class DataBase {
       "frutas": 9,
       "tipo": 0,
       "espacio": 2,
-      "cafe": 5
+      "cafe": 5,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Simon Algo",
@@ -945,7 +1011,8 @@ class DataBase {
       "frutas": 10,
       "tipo": 5,
       "espacio": 0,
-      "cafe": 4
+      "cafe": 4,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Sofia Guzman",
@@ -959,7 +1026,8 @@ class DataBase {
       "frutas": 8,
       "tipo": 6,
       "espacio": 2,
-      "cafe": 3
+      "cafe": 3,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Tatiana Hoyos",
@@ -973,7 +1041,8 @@ class DataBase {
       "frutas": 10,
       "tipo": 0,
       "espacio": 3,
-      "cafe": 10
+      "cafe": 10,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Valentina Cardona",
@@ -987,7 +1056,8 @@ class DataBase {
       "frutas": 0,
       "tipo": 0,
       "espacio": 0,
-      "cafe": 7
+      "cafe": 7,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Valeria Ramirez",
@@ -1001,7 +1071,8 @@ class DataBase {
       "frutas": 8,
       "tipo": 5,
       "espacio": 2,
-      "cafe": 4
+      "cafe": 4,
+      "similarity": 0,
     },
     {
       "nombreCompleto": "Vanessa Castillo",
@@ -1015,7 +1086,8 @@ class DataBase {
       "frutas": 10,
       "tipo": 5,
       "espacio": 5,
-      "cafe": 10
+      "cafe": 10,
+      "similarity": 0,
     }
   ]
 }

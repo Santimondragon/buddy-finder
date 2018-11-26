@@ -17,11 +17,14 @@ import ContextCriteria from '../ContextCriteria/ContextCriteria';
 import Users from '../Users/Users';
 import HoodUsers from '../HoodUsers/HoodUsers';
 import Match from '../../components/Match/Match';
+import { dataBase } from '../../stores/dataBase';
 
 
 export class Root extends React.Component {
     constructor(props:any){
-        super(props)
+        super(props);
+        store.shuffleArray(dataBase.users);
+        store.setUser(dataBase.users);
     }
 
     render(){

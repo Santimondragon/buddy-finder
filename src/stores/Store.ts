@@ -15,7 +15,17 @@ import Users from '../containers/Users/Users';
 
 class Store {
     @observable users: any[] = dataBase.users;
-
+    @action shuffleArray(array: any) {
+        let l = array.length, temp, index;
+        while (l > 0) {
+            index = Math.floor(Math.random() * l);
+            l--;
+            temp = array[l];
+            array[l] = array[index];
+            array[index] = temp;
+        }
+        return array;
+    }
     @observable contextCriterios: any[] = [
         {
             display: "Quiero salir con un hombre",
@@ -45,8 +55,12 @@ class Store {
     @observable filteredUsersTwo: any[] = [];
     @observable filteredUsersThree: any[] = [];
     @observable filteredUsersFour: any[] = [];
-
     @observable tempHoodFilterArray: any[] = this.users;
+
+    @observable filterPrecision:number = 5;
+    @action setFilterPresicion(value:number){
+        this.filterPrecision = value;
+    }
     @action setHoodUsers(criteria: string, position: number) {
         if (criteria.includes("clear")) {
             const value = criteria.replace("clear", "");
@@ -79,7 +93,7 @@ class Store {
                     const tempArray = this.hoodUsers.filter(criterio => filtro != criterio.genero);
                     this.tempHoodFilterArray = tempArray;
 
-                    
+
                     const filteredArray = this.hoodUsers.filter(criterio => filtro == criterio.genero);
                     if (position == 0) {
                         this.filteredUsersOne = filteredArray;
@@ -97,11 +111,29 @@ class Store {
 
                 if (criteria.includes("helado")) {
 
-                    const tempArray = this.hoodUsers.filter(criterio => criterio.temperatura >= 5);
+                    const tempArray = this.hoodUsers.filter(criterio => criterio.temperatura >= this.filterPrecision);
                     this.tempHoodFilterArray = tempArray;
+                    this.setCriteria("Helado");
 
-                    
-                    const filteredArray = this.hoodUsers.filter(criterio => criterio.temperatura < 5);
+
+                    const filteredArray = this.hoodUsers.filter(criterio => criterio.temperatura < this.filterPrecision);
+                    if (position == 0) {
+                        this.filteredUsersOne = filteredArray;
+                    } else if (position == 1) {
+                        this.filteredUsersTwo = filteredArray;
+                    } else if (position == 2) {
+                        this.filteredUsersThree = filteredArray;
+                    } else if (position == 3) {
+                        this.filteredUsersFour = filteredArray;
+                    }
+                };
+                if (criteria.includes("Torta")) {
+
+                    const tempArray = this.hoodUsers.filter(criterio => criterio.temperatura <= this.filterPrecision);
+                    this.tempHoodFilterArray = tempArray;
+                    this.setCriteria("Torta");
+
+                    const filteredArray = this.hoodUsers.filter(criterio => criterio.temperatura > this.filterPrecision);
                     if (position == 0) {
                         this.filteredUsersOne = filteredArray;
                     } else if (position == 1) {
@@ -114,11 +146,11 @@ class Store {
                 };
                 if (criteria.includes("tomar")) {
 
-                    const tempArray = this.hoodUsers.filter(criterio => criterio.cafe >= 5);
+                    const tempArray = this.hoodUsers.filter(criterio => criterio.cafe >= this.filterPrecision);
                     this.tempHoodFilterArray = tempArray;
+                    this.setCriteria("Cafe");
 
-                    
-                    const filteredArray = this.hoodUsers.filter(criterio => criterio.cafe < 5);
+                    const filteredArray = this.hoodUsers.filter(criterio => criterio.cafe < this.filterPrecision);
                     if (position == 0) {
                         this.filteredUsersOne = filteredArray;
                     } else if (position == 1) {
@@ -131,11 +163,11 @@ class Store {
                 };
                 if (criteria.includes("Tradicionales")) {
 
-                    const tempArray = this.hoodUsers.filter(criterio => criterio.tipo <= 5);
+                    const tempArray = this.hoodUsers.filter(criterio => criterio.tipo <= this.filterPrecision);
                     this.tempHoodFilterArray = tempArray;
 
-                    
-                    const filteredArray = this.hoodUsers.filter(criterio => criterio.cafe > 5);
+
+                    const filteredArray = this.hoodUsers.filter(criterio => criterio.cafe > this.filterPrecision);
                     if (position == 0) {
                         this.filteredUsersOne = filteredArray;
                     } else if (position == 1) {
@@ -148,11 +180,11 @@ class Store {
                 };
                 if (criteria.includes("Extravagantes")) {
 
-                    const tempArray = this.hoodUsers.filter(criterio => criterio.tipo >= 5);
+                    const tempArray = this.hoodUsers.filter(criterio => criterio.tipo >= this.filterPrecision);
                     this.tempHoodFilterArray = tempArray;
 
-                    
-                    const filteredArray = this.hoodUsers.filter(criterio => criterio.cafe < 5);
+
+                    const filteredArray = this.hoodUsers.filter(criterio => criterio.cafe < this.filterPrecision);
                     if (position == 0) {
                         this.filteredUsersOne = filteredArray;
                     } else if (position == 1) {
@@ -165,11 +197,11 @@ class Store {
                 };
                 if (criteria.includes("poca")) {
 
-                    const tempArray = this.hoodUsers.filter(criterio => criterio.espacio <= 5);
+                    const tempArray = this.hoodUsers.filter(criterio => criterio.espacio <= this.filterPrecision);
                     this.tempHoodFilterArray = tempArray;
+                    this.setCriteria("Poca");
 
-                    
-                    const filteredArray = this.hoodUsers.filter(criterio => criterio.espacio > 5);
+                    const filteredArray = this.hoodUsers.filter(criterio => criterio.espacio > this.filterPrecision);
                     if (position == 0) {
                         this.filteredUsersOne = filteredArray;
                     } else if (position == 1) {
@@ -182,11 +214,11 @@ class Store {
                 };
                 if (criteria.includes("mucha")) {
 
-                    const tempArray = this.hoodUsers.filter(criterio => criterio.espacio >= 5);
+                    const tempArray = this.hoodUsers.filter(criterio => criterio.espacio >= this.filterPrecision);
                     this.tempHoodFilterArray = tempArray;
+                    this.setCriteria("Mucha");
 
-                    
-                    const filteredArray = this.hoodUsers.filter(criterio => criterio.espacio < 5);
+                    const filteredArray = this.hoodUsers.filter(criterio => criterio.espacio < this.filterPrecision);
                     if (position == 0) {
                         this.filteredUsersOne = filteredArray;
                     } else if (position == 1) {
@@ -200,6 +232,11 @@ class Store {
             });
             this.hoodUsers = this.tempHoodFilterArray;
         }
+    }
+
+    @observable similarity:number = 0.7;
+    @action setSimilarity(value:number){
+        this.similarity = value;
     }
     @action cosineSimilarity(selectedUser: any) {
         let selectedUserArray = [
@@ -225,7 +262,9 @@ class Store {
 
             let similarity = multAB / Math.sqrt(powerA * powerB);
 
-            if (similarity >= .7 && comparedUser != selectedUser) {
+            
+            if (similarity >= this.similarity && comparedUser != selectedUser) {
+                comparedUser.similarity = similarity;
                 this.hoodUsers.push(comparedUser);
             }
         });
@@ -268,6 +307,287 @@ class Store {
     };
     @action setHoodUser(user: any) {
         this.selectedHoodUser = user;
+    }
+
+
+    @observable criteria: string[] = [];
+    @action setCriteria(criteria: string) {
+        this.criteria.push(criteria);
+    }
+    @observable placesCriteria: any[] = [
+        {
+            place: "Juan Valdez",
+            key1: "Cafe",
+            key2: "Helado",
+            key3: "Torta",
+            key4: "Mucha"
+        },
+        {
+            place: "Ventolinni",
+            key1: "Cafe",
+            key2: "Helado",
+            key3: "Torta",
+            key4: "Mucha"
+        },
+        {
+            place: "Starbucks",
+            key1: "Cafe",
+            key2: "Helado",
+            key3: "Torta",
+            key4: "Mucha"
+        },
+        {
+            place: "Storia D'amore",
+            key1: "Cafe",
+            key2: "Helado",
+            key3: "Torta",
+            key4: "Mucha"
+        },
+        {
+            place: "Pan del Italiano",
+            key1: "Cafe",
+            key2: "Helado",
+            key3: "Torta",
+            key4: "Poca"
+        },
+        {
+            place: "Galatea",
+            key1: "Cafe",
+            key2: "Helado",
+            key3: "Torta",
+            key4: "Poca"
+        },
+        {
+            place: "Librería Nacional",
+            key1: "Cafe",
+            key2: "Helado",
+            key3: "Torta",
+            key4: "Poca"
+        },
+        {
+            place: "Más Brownies",
+            key1: "No",
+            key2: "Helado",
+            key3: "Torta",
+            key4: "Poca"
+        },
+        {
+            place: "Cookie Jar",
+            key1: "No",
+            key2: "Helado",
+            key3: "Torta",
+            key4: "Mucha"
+        },
+        {
+            place: "Dolce Stella",
+            key1: "No",
+            key2: "Helado",
+            key3: "Torta",
+            key4: "Poca"
+        },
+        {
+            place: "Wonka",
+            key1: "No",
+            key2: "Helado",
+            key3: "Torta",
+            key4: "Mucha"
+        },
+        {
+            place: "Fiore",
+            key1: "Cafe",
+            key2: "Helado",
+            key3: "No",
+            key4: "Mucha"
+        },
+        {
+            place: "Dolce Vicolo",
+            key1: "Cafe",
+            key2: "Helado",
+            key3: "No",
+            key4: "Mucha"
+        },
+        {
+            place: "Creppes & Waffles",
+            key1: "Cafe",
+            key2: "Helado",
+            key3: "No",
+            key4: "Mucha"
+        },
+        {
+            place: "Tierradentro Cafe",
+            key1: "Cafe",
+            key2: "Helado",
+            key3: "No",
+            key4: "Poca"
+        },
+        {
+            place: "Elsa Café",
+            key1: "Cafe",
+            key2: "Helado",
+            key3: "No",
+            key4: "Poca"
+        },
+        {
+            place: "Corinna",
+            key1: "Cafe",
+            key2: "Helado",
+            key3: "No",
+            key4: "Mucha"
+        },
+        {
+            place: "El Molino",
+            key1: "Cafe",
+            key2: "No",
+            key3: "Torta",
+            key4: "Mucha"
+        },
+        {
+            place: "Tostao",
+            key1: "Cafe",
+            key2: "No",
+            key3: "Torta",
+            key4: "Mucha"
+        },
+        {
+            place: "Ananda",
+            key1: "Cafe",
+            key2: "No",
+            key3: "Torta",
+            key4: "Poca"
+        },
+        {
+            place: "El Patio del Museo",
+            key1: "Cafe",
+            key2: "No",
+            key3: "Torta",
+            key4: "Poca"
+        },
+
+    ]
+    @observable places: any[] = []
+    @action setPlaces() {
+        this.placesCriteria.forEach(place => {
+            this.criteria.forEach(criteria => {
+                if (place.key1 == "No" && criteria == "No") {
+                    this.places.push(place.place);
+                }
+                if (place.key2 == "Helado" && criteria == "Helado") {
+                    this.places.push(place.place);
+                }
+                if (place.key3 == "Torta" && criteria == "Torta") {
+                    this.places.push(place.place);
+                }
+                if (place.key4 == "Mucha" && criteria == "Mucha") {
+                    this.places.push(place.place);
+                }
+                if (place.key4 == "Poca" && criteria == "Poca") {
+                    this.places.push(place.place);
+                }
+                if (place.key3 == "No" && criteria == "No") {
+                    this.places.push(place.place);
+                }
+                if (place.key4 == "Mucha" && criteria == "Mucha") {
+                    this.places.push(place.place);
+                }
+                if (place.key4 == "Poca" && criteria == "Poca") {
+                    this.places.push(place.place);
+                }
+                if (place.key2 == "No" && criteria == "No") {
+                    this.places.push(place.place);
+                }
+                if (place.key3 == "Torta" && criteria == "Torta") {
+                    this.places.push(place.place);
+                }
+                if (place.key4 == "Mucha" && criteria == "Mucha") {
+                    this.places.push(place.place);
+                }
+                if (place.key4 == "Poca" && criteria == "Poca") {
+                    this.places.push(place.place);
+                }
+                if (place.key3 == "No" && criteria == "No") {
+                    this.places.push(place.place);
+                }
+                if (place.key4 == "Mucha" && criteria == "Mucha") {
+                    this.places.push(place.place);
+                }
+                if (place.key4 == "Poca" && criteria == "Poca") {
+                    this.places.push(place.place);
+                }
+                if (place.key1 == "Cafe" && criteria == "Cafe") {
+                    this.places.push(place.place);
+                }
+                if (place.key2 == "Helado" && criteria == "Helado") {
+                    this.places.push(place.place);
+                }
+                if (place.key3 == "Torta" && criteria == "Torta") {
+                    this.places.push(place.place);
+                }
+                if (place.key4 == "Mucha" && criteria == "Mucha") {
+                    this.places.push(place.place);
+                }
+                if (place.key4 == "Poca" && criteria == "Poca") {
+                    this.places.push(place.place);
+                }
+                if (place.key3 == "No" && criteria == "No") {
+                    this.places.push(place.place);
+                }
+                if (place.key4 == "Mucha" && criteria == "Mucha") {
+                    this.places.push(place.place);
+                }
+                if (place.key4 == "Poca" && criteria == "Poca") {
+                    this.places.push(place.place);
+                }
+                if (place.key2 == "No" && criteria == "No") {
+                    this.places.push(place.place);
+                }
+                if (place.key3 == "Torta" && criteria == "Torta") {
+                    this.places.push(place.place);
+                }
+                if (place.key4 == "Mucha" && criteria == "Mucha") {
+                    this.places.push(place.place);
+                }
+                if (place.key4 == "Poca" && criteria == "Poca") {
+                    this.places.push(place.place);
+                }
+                if (place.key3 == "No" && criteria == "No") {
+                    this.places.push(place.place);
+                }
+                if (place.key4 == "Mucha" && criteria == "Mucha") {
+                    this.places.push(place.place);
+                }
+                if (place.key4 == "Poca" && criteria == "Poca") {
+                    this.places.push(place.place);
+                }
+            });
+        });
+
+    }
+    @action clearPlaces() {
+        this.places = [];
+    }
+    @action getPlace() {
+        return this.places[Math.floor(Math.random() * this.places.length)];
+    }
+
+    //==== Clear Everething to be able to reestart =====
+    @action clearAllArrays() {
+        this.filteredUsersOne = [];
+        this.filteredUsersTwo = [];
+        this.filteredUsersThree = [];
+        this.filteredUsersFour = [];
+        this.tempHoodFilterArray = [];
+        this.hoodUsers = [];
+        this.places = [];
+        this.selectedUser = {};
+        this.selectedHoodUser = {};
+        document.getElementById("filter0").style.background = "white";
+        document.getElementById("filter1").style.background = "white";
+        document.getElementById("filter2").style.background = "white";
+        document.getElementById("filter3").style.background = "white";
+        document.getElementById("filter0").innerHTML = "<span></span>";
+        document.getElementById("filter1").innerHTML = "<span></span>";
+        document.getElementById("filter2").innerHTML = "<span></span>";
+        document.getElementById("filter3").innerHTML = "<span></span>";
     }
 }
 
