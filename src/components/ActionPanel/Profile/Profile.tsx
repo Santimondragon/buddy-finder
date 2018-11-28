@@ -13,7 +13,7 @@ const Profile = observer(({ persona }: profileProps) => {
     return (
         <article id="profile" className="notActive" >
             <div>
-                <img src="./assets/img/profileSlot.png" alt="Profile Slot"
+                <img src="./assets/img/profileSlot.png" alt="Profile Slot" className="slot"
                     onClick={() => {
                         document.getElementById("profile").className === "notActive" ? document.getElementById("profile").className = "active" : document.getElementById("profile").className = "notActive";
                         store.clearAllArrays();

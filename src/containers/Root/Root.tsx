@@ -25,19 +25,20 @@ export class Root extends React.Component {
         super(props);
         store.shuffleArray(dataBase.users);
         store.setUser(dataBase.users);
+        store.fillPlaces(store.placesCriteria);
     }
 
     render(){
         return (
             <Router>
-                <div>
+                <section id="container">
                     <Route exact path="/" component={ActionPanel} />
                     <Route exact path="/" component={Users} />
                     <Route exact path="/" component={HoodUsers} />
                     <Route exact path="/" component={ContextCriteria} />
                     <Route exact path="/" component={HoodCriteria} />
                     <Route exact path="/" component={Match} />
-                </div>
+                </section>
             </Router>
 
         )

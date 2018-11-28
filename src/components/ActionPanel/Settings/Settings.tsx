@@ -18,7 +18,7 @@ const Settings = observer(({ }: iSettingsProps) => {
                 onClick={() => {
                     document.getElementById("settings").className === "notActive" ? document.getElementById("settings").className = "active" : document.getElementById("settings").className = "notActive";
                 }}>
-                <img src="./assets/img/toffee.png" alt="" />
+                <img src="./assets/img/settings.png" alt="" />
                 <h4>Configuración</h4>
             </div>
             <ul>
@@ -27,6 +27,7 @@ const Settings = observer(({ }: iSettingsProps) => {
                         document.getElementById("settings").className === "notActive" ? document.getElementById("settings").className = "active" : document.getElementById("settings").className = "notActive";
                     }}
                     id="close">
+                    ×
                 </article>
                 <li>
                     <span>Nivel de Afinidad: <b>{Math.floor(store.similarity * 100)}%</b></span>
@@ -60,12 +61,7 @@ const Settings = observer(({ }: iSettingsProps) => {
                         <input
                             onChange={(e: any) => {
                                 store.setFilterPresicion(e.target.value);
-                                if (store.selectedUser.nombreCompleto != "") {
-                                    if (store.filteredUsersOne.length >= 1) {
-                                        alert("Una vez aplicado un filtro no puedes cambiar el nivel de presición de este")
-                                        store.setFilterPresicion(store.filterPrecision);
-                                    } 
-                                }
+                                
                             }}
                             id="sFiltro"
                             type="range"

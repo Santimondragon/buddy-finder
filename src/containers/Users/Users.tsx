@@ -10,12 +10,14 @@ interface usersProps {
 
 }
 
-const Users = observer((usersProps:any) => {
+const Users = observer((usersProps: any) => {
     return (
         <article id="users">
-            {store.users.map((elem: any, index: number) =>
-                <User person={elem} picture={elem.foto} genre={elem.genero}/>
-            )}
+            <section>
+                {store.users.map((elem: any, index: number) =>
+                    <User person={elem} picture={elem.foto} genre={elem.genero} />
+                )}
+            </section>
         </article>
     )
 });

@@ -26,6 +26,12 @@ class Store {
         }
         return array;
     }
+    @action fillPlaces(array:any[]){
+        array.forEach(place => {
+            this.places.push(place.place);
+        });
+        console.log(array);
+    }
     @observable contextCriterios: any[] = [
         {
             display: "Quiero salir con un hombre",
@@ -467,6 +473,7 @@ class Store {
     @observable places: any[] = []
     @action setPlaces() {
         this.placesCriteria.forEach(place => {
+            this.places.push(place.place);
             this.criteria.forEach(criteria => {
                 if (place.key1 == "No" && criteria == "No") {
                     this.places.push(place.place);

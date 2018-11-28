@@ -34,3 +34,45 @@
         }
     }
 }
+@media only screen and (max-width: 500px) {
+    #filters {
+        flex: 50% 0 1;
+        width: 100%;
+        height: 90%;
+        padding: 0 15px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: flex-start;
+        h4 {
+            display: none;
+        }
+        #filter0, #filter1, #filter2  {
+            width: 100%;
+            min-height: 27%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 10px 15px;
+            box-shadow:inset  0 0 15px 0 rgba(0, 0, 0, .2);
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            &:last-child {
+                margin: 0;
+            }
+            span {
+                text-align: center;
+                font-size: 12px;
+                font-weight: 400;
+                color: white;
+            }
+        }
+        #filter3 {
+            display: none;
+        }
+    }
+}

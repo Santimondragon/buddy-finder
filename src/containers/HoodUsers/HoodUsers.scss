@@ -4,7 +4,6 @@
     width: 33vw;
     padding: 0 2vw;
     height: 100vh;
-    
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -12,6 +11,22 @@
     align-items: center;
     position: fixed;
     top: 0px;
-    right:  0px;
-    
+    right: 0px;
+}
+
+@media only screen and (max-width: 500px) {
+    #hoodUsers {
+        margin: 0;
+        width: 100vw;
+        padding: 0 5vw;
+        height: 52vh;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 40vh;
+        right: 0px;
+    }
 }

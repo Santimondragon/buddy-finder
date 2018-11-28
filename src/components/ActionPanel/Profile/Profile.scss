@@ -15,7 +15,7 @@
         }
         .thumbnail {
             position: absolute;
-            width: 95px;
+            height: 95px;
             top: 9px;
             left: 12px;
             border-radius: 90px;
@@ -42,6 +42,82 @@
         }
         h1 {
             filter: opacity(1);
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #profile {
+        flex: 50% 0 1;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        cursor: default;
+        position: relative;
+        div {
+            position: static;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            height: 80%;
+            .slot {
+                position: relative;
+                margin-bottom: 0px;
+                top: 0;
+                right: 0;
+            }
+            .thumbnail {
+                position: relative;
+                height: 90px;
+                top: 0;
+                left: 0;
+                border-radius: 90px;
+                box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+            }
+            img {
+                position: relative;
+                height: 110px;
+                cursor: pointer;
+                margin: 0;
+                top: 0;
+                right: 0;
+            }
+        }
+        h1 {
+            cursor: default;
+            font-size: 16px;
+            &::selection {
+                background: none;
+            }
+        }
+        &.notActive {
+            img {
+                margin-bottom: 00px;
+            }
+            h1 {
+                filter: opacity(0);
+            }
+        }
+        &.active {
+            div {
+                margin-bottom: 10px;
+                img {
+                    margin-bottom: 5px;
+                }
+                .thumbnail {
+                    margin-top: -105px;
+                }
+                h1 {
+                    filter: opacity(1);
+                }
+            }
         }
     }
 }
